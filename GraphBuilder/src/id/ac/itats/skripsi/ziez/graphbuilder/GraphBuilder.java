@@ -16,7 +16,7 @@ import android.util.Log;
 
 public class GraphBuilder {
 
-	protected static final String TAG = "Graph Data";
+	protected static final String TAG = "GraphBuilder";
 
 	private final Context context;
 	private SQLiteDatabase db;
@@ -24,7 +24,7 @@ public class GraphBuilder {
 	private DaoMaster daoMaster;
 	private DaoSession daoSession;
 	private tb_edgeDao edgeDao;
-	private GraphBuilder graphData;
+	private GraphBuilder graphBuilder;
 
 	private RoutableGraph graph = new RoutableGraph();
 
@@ -66,7 +66,7 @@ public class GraphBuilder {
 	}
 
 	public GraphBuilder getInstance() {
-		if (graphData == null) {
+		if (graphBuilder == null) {
 			return new GraphBuilder(context);
 		} else {
 			return this;

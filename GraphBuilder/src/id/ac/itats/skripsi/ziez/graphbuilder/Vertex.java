@@ -14,10 +14,12 @@ public class Vertex implements Comparable<Vertex> {
 		name = argName;
 	}
 
+	@Override
 	public String toString() {
 		return name;
 	}
 
+	@Override
 	public int compareTo(Vertex other) {
 		return Double.compare(minDistance, other.minDistance);
 	}
